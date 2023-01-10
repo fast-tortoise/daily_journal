@@ -1,0 +1,14 @@
+<%- include('./partials/header.ejs'); -%>
+<h1>Home</h1>
+
+<p><%= para %></p>
+
+<% listOfContent.forEach(ele =>{ %>
+    <h2>  <%= ele.textInput %> </h2>
+    
+    <p> <%= ele.message.substring(0, 100) + " ... " %><a href="/<%= ele.textInput %>"> Read more </a> </p>
+
+    <%})  %>
+    
+
+<%- include('./partials/footer.ejs'); -%>
